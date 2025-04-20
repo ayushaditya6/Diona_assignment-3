@@ -1,0 +1,163 @@
+form(action="/submit" method="post")
+  //- Name fields
+  .form-group
+    label(for="first_name") First Name
+    input#first_name(type="text" name="first_name" required)
+
+  .form-group
+    label(for="second_name") Second Name
+    input#second_name(type="text" name="second_name")
+
+  .form-group
+    label(for="last_name") Last Name
+    input#last_name(type="text" name="last_name" required)
+
+  //- Date of Birth split into Day/Month/Year
+  .form-group
+    label Date of Birth
+    .dob
+      input(type="number" name="dob-day" placeholder="Day" min="1" max="31" required)
+      input(type="number" name="dob-month" placeholder="Month" min="1" max="12" required)
+      input(type="number" name="dob-year" placeholder="Year" min="1900" max="2100" required)
+
+  //- Gender field
+  .form-group
+    label(for="gender") Gender
+    input#gender(type="text" name="gender")
+
+  //- Other Last Names field
+  .form-group
+    label(for="other_last_names") Other Last Names
+    input#other_last_names(type="text" name="other_last_names")
+
+  //- Also Goes By field
+  .form-group
+    label(for="also_goes_by") Also Goes By
+    input#also_goes_by(type="text" name="also_goes_by")
+
+  //- Current Address field
+  .form-group
+    label(for="current_address") Current Address
+    input#current_address(type="text" name="current_address")
+
+  //- Birthplace field
+  .form-group
+    label(for="birthplace") Birthplace
+    input#birthplace(type="text" name="birthplace")
+
+  //- Email field
+  .form-group
+    label(for="email") Email
+    input#email(type="email" name="email" required)
+
+  //- Phone field
+  .form-group
+    label(for="phone") Phone
+    input#phone(type="tel" name="phone" required)
+
+  //- Multi-select checkboxes for IDs
+  .form-group
+    label IDs Provided
+    .checkbox-group
+      label
+        input(type="checkbox" name="ids_provided" value="passport")
+        | Passport
+      label
+        input(type="checkbox" name="ids_provided" value="dl")
+        | Driver's License
+      label
+        input(type="checkbox" name="ids_provided" value="birth_certificate")
+        | Birth Certificate
+      label
+        input(type="checkbox" name="ids_provided" value="other")
+        | Other
+
+  //- Other ID field
+  .form-group
+    label(for="other_id") Other ID
+    input#other_id(type="text" name="other_id")
+
+  //- DL Number field
+  .form-group
+    label(for="dl_number") DL Number
+    input#dl_number(type="text" name="dl_number")
+
+  //- Signature field
+  .form-group
+    label(for="signature") Signature
+    input#signature(type="text" name="signature")
+
+  //- Consent Date field
+  .form-group
+    label(for="consent_date") Consent Date
+    input#consent_date(type="date" name="consent_date" required)
+
+  //- Consent Given field
+  .form-group
+    label(for="consent_given") Consent Given
+    input#consent_given(type="checkbox" name="consent_given")
+
+  //- Witness Name field
+  .form-group
+    label(for="witness_name") Witness Name
+    input#witness_name(type="text" name="witness_name" required)
+
+  //- Witness Signature field
+  .form-group
+    label(for="witness_signature") Witness Signature
+    input#witness_signature(type="text" name="witness_signature")
+
+  //- Agency Name field
+  .form-group
+    label(for="agency_name") Agency Name
+    input#agency_name(type="text" name="agency_name")
+
+  //- Risk Reason field
+  .form-group
+    label(for="risk_reason") Risk Reason
+    input#risk_reason(type="text" name="risk_reason")
+
+  //- Assigned Worker field
+  .form-group
+    label(for="assigned_worker") Assigned Worker
+    input#assigned_worker(type="text" name="assigned_worker")
+
+  //- Last Assessment Date field
+  .form-group
+    label(for="last_assessment_date") Last Assessment Date
+    input#last_assessment_date(type="date" name="last_assessment_date")
+
+  //- Submitting Designate field
+  .form-group
+    label(for="submitting_designate") Submitting Designate
+    input#submitting_designate(type="text" name="submitting_designate")
+
+  //- Designate Phone field
+  .form-group
+    label(for="designate_phone") Designate Phone
+    input#designate_phone(type="tel" name="designate_phone")
+
+  //- Designate Email field
+  .form-group
+    label(for="designate_email") Designate Email
+    input#designate_email(type="email" name="designate_email")
+
+  //- Designate Fax field
+  .form-group
+    label(for="designate_fax") Designate Fax
+    input#designate_fax(type="text" name="designate_fax")
+
+  //- Request Date field
+  .form-group
+    label(for="request_date") Request Date
+    input#request_date(type="date" name="request_date")
+
+  //- Conditional field for Unconsented
+  .form-group
+    label(for="unconsented") Unconsented
+    input#unconsented(type="checkbox" name="unconsented" hidden)
+    //- Add JavaScript to show this field only when Name and Signature are blank
+
+  //- Submit button
+  .form-group
+    button(type="submit") Submit
